@@ -1,6 +1,7 @@
 # DS 5559: Exploratory Text Analytics
 
-![alt text](https://docsouth.unc.edu/images/firstperson_header.gif)
+![alt text](https://docsouth.unc.edu/images/firstperson_header.gif)  
+Data Source: https://docsouth.unc.edu/fpn/
 
 This repo contains the Data Products for the DS5559 Final Project. The entire corpus is available here, and the processing of those individual documents is repeatable by running 'OHCO_processing.py'  
   
