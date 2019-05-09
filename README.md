@@ -1,4 +1,7 @@
 # DS 5559: Exploratory Text Analytics
+
+![alt text](https://docsouth.unc.edu/images/firstperson_header.gif)
+
 This repo contains the Data Products for the DS5559 Final Project. The entire corpus is available here, and the processing of those individual documents is repeatable by running 'OHCO_processing.py'  
   
 Keeping the dataframe from OHCO_processing.py in your global environment allows you to move on and run HCA_PCA.py and Sentiment.py as well. These generate extensions from the processed text dataset, as well as a clustering tree visualization of chapter similarity based upon the Principle Components.  
