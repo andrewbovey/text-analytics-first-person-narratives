@@ -8,8 +8,11 @@ Vocab for entire corpus: vocab.csv
 ## Processing to OHCO Format
 OHCO_processing.py
 
-## HCA PCA
+## Principle Components
 HCA_PCA.py
+
+## Sentiment (VADER)
+Sentiment.py
 
 ## Visualizations
 All chapters (hard to read): https://virginia.box.com/s/d7k225tey1ahvhwvob7f1fazq7tgh236  
