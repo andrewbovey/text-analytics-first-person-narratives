@@ -6,7 +6,7 @@ Chunked by Chapters as CSV: https://virginia.box.com/s/djcnv4l49bwozaawjpepqsdzn
 Vocab for entire corpus: vocab.csv
 
 ## Processing to OHCO Format
-####OHCO_processing.py
+OHCO_processing.py
 
 ## HCA PCA
-####HCA_PCA.py
+HCA_PCA.py
