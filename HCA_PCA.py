@@ -1,5 +1,9 @@
-#%%
-import glob
+# =============================================================================
+# Andrew Evans (ace8p)
+# DS5559: Exploratory Text Analytics
+# Final Project
+# HCA PCA via SciKitLearn w/ Tree Visualization
+# =============================================================================#%%
 import re
 
 # For PCA
@@ -19,24 +23,23 @@ import matplotlib.font_manager
 import matplotlib.colors
 
 #%%
-
 use_idf = True
 stop_words = 'english'
 max_features = 1000
 n_components = 10
 
 #%%
-
+# =============================================================================
+# SciKitLearn TfIdf
+# =============================================================================
 countVectorizer = TfidfVectorizer(max_features=max_features, use_idf=use_idf, stop_words=stop_words)
 countMatrix1 = countVectorizer.fit_transform(chaps.token_str)
 
 #%%
-
 countMatrix = normalize(countMatrix1)
 countMatrix = countMatrix.toarray()
 
 #%%
-
 pca = PCA(n_components=n_components)
 projected = pca.fit_transform(countMatrix)
 
@@ -52,17 +55,22 @@ COMPS.columns = ["PC{}".format(i) for i in COMPS.columns]
 COMPS.index = vocab.term_str
 
 #%%
+# Show top terms by Principle Component
 COMPS['PC9'].sort_values(ascending=False).head(20)
 
 #%%
 SIMS = pdist(countMatrix, metric='cosine')
 
 #%%
+# =============================================================================
+# Remove NaN from SIMS
+# =============================================================================
 SIMS = np.nan_to_num(SIMS, copy = True)
 
 np.unique(SIMS, return_counts=True)
 
 #%%
+# Generate the tree visualization of the clustering
 TREE = sch.linkage(SIMS, method='ward')
 
 #%%
@@ -71,11 +79,14 @@ def plot_tree(tree, labels):
     fig, axes = plt.subplots(figsize=(30, 550),dpi = 110)
     dendrogram = sch.dendrogram(tree, labels=labels, orientation="left", distance_sort=True)
     plt.tick_params(axis='both', which='major', labelsize=5)
+
 #%%
+# =============================================================================
+# Visualization: All chapters (too large)
+# =============================================================================
 plot_tree(TREE,chaps.index)
 
 #%%
-
 clear()
 
 #%%
